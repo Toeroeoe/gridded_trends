@@ -1,0 +1,14 @@
+*.png
+*.csv 
+*.pdf 
+*.nc 
+*.h5
+*.parquet
+*.pyc
+*.out
+*.gif
+*.xlsx
+*.npy
+.vscode/*
+BAK/*
+out/*
