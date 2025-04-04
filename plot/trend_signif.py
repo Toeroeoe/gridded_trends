@@ -6,22 +6,24 @@ from neoplot import figures, plots
 from datarie import grids, templates
 
 # Data settings
-file = 'out/data/CLM5_detect_SP_TWS_trends.nc'
+indir = '/p/scratch/cjibg31/jibg3105/projects/papers/CLM5EU3_trends/out/trend_data/eCLM_trends/'
+infile = 'CLM5_detect_SP_upd_0_3km.nc'
 variable = 'TWS'
-unit = 'mm / day'
-outdir = 'out/plots/'
-outfile = f'{variable}_trend_detect'
+units = {'TWS': r'mm month$^{-1}$',
+         'ET': r'mm month$^{-1}$',
+         'SM': r'm$^{3}$ m$^{-3}$ month$^{-1}$'}
+outdir = '/p/scratch/cjibg31/jibg3105/projects/papers/CLM5EU3_trends/out/plots/eCLM_paper/'
+outfile = f'{variable}_CLM5EU3_SP_trend_signif'
 
 
 # Plot settings
 plot_args = {
             'fs_title': 12,
             'fs_label': 10,
-            'TWS': {'vmax': 0.1,
-                     'vmin': -0.1},
+            'TWS': {'vmax': 5,
+                     'vmin': -5},
             'SXI_SM_r': {'vmax': 0.002,
                          'vmin': -0.002},
-
             'significance': 0.05,
             'hatch_density': 3,
             'hatch_pattern': '.'
@@ -31,7 +33,7 @@ plot_args = {
 
 if __name__ == '__main__':
 
-    data = nc.Dataset(file)
+    data = nc.Dataset(f'{indir}/{infile}')
 
     array = data.variables[f'{variable}_slope'][:]
 
@@ -73,7 +75,7 @@ if __name__ == '__main__':
     
     ax.colorbar(trend, 
                 ax = ax.ax,
-                label = f'Trend [{unit}]',
+                label = f'Trend [{units[variable]}]',
                 shrink = 0.6,
                 fs_label = plot_args['fs_label'])
 

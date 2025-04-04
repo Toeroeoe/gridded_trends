@@ -63,11 +63,18 @@ if __name__ == '__main__':
                         help = 'arguments for custom function',
                         type = str)
     
+    parser.add_argument('--delete_dims',
+                        '-dd',
+                        help = 'which dimensions to delete',
+                        type = str)
+    
     args = parser.parse_args()
 
     func_args = ast.literal_eval(args.func_args)
 
     units = ast.literal_eval(args.slope_units)
+
+    delete_dims = ast.literal_eval(args.slope_units)
 
     start = timer()
 
@@ -90,6 +97,7 @@ if __name__ == '__main__':
                year_end = args.year_end,
                month_start = args.month_start,
                month_end = args.month_end,
+               dtype = 'float64',
                **func_args)
 
     end = timer()

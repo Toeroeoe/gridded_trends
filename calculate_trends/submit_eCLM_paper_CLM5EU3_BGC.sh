@@ -3,14 +3,14 @@
 #SBATCH --account=jibg31
 #SBATCH --ntasks=128
 #SBATCH --mem=512000
-#SBATCH --time=1:00:00
+#SBATCH --time=30:00
 
 # Environment
 source /p/scratch/cjibg31/jibg3105/projects/venvs/test_crusty/activate.sh
 
 # Data
-data=CLM5_detect_BGC
-outdir=/p/scratch/cjibg31/jibg3105/projects/papers/CLM5EU3_trends/out/trend_data/eCLM_trends
+data=CLM5_detect_BGC_3
+outdir=/p/scratch/cjibg31/jibg3105/projects/papers/CLM5EU3_trends/out/trend_data/eCLM_trends/
 outfile=CLM5_detect_BGC_upd_0.nc
 variables=(
     TWS

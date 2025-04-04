@@ -9,9 +9,9 @@
 source /p/scratch/cjibg31/jibg3105/projects/venvs/test_crusty/activate.sh
 
 # Data
-data=CLM5_detect_SP
+data=CLM5_detect_SP_12
 outdir=/p/scratch/cjibg31/jibg3105/projects/papers/CLM5EU3_trends/out/trend_data/
-outfile=CLM5_detect_SP_upd_0.nc
+outfile=CLM5_detect_SP_upd_0_12km.nc
 variables=(
     TWS
     ET
