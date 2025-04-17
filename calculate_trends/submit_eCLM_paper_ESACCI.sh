@@ -9,9 +9,9 @@
 source /p/scratch/cjibg31/jibg3105/projects/venvs/test_crusty/activate.sh
 
 # Data
-data=ESACCI_SM_12
-outdir=/p/scratch/cjibg31/jibg3105/projects/papers/CLM5EU3_trends/out/trend_data/
-outfile=ESACCI_SM_upd_0_12km.nc
+data=ESACCI_SM_3
+outdir=/p/scratch/cjibg31/jibg3105/projects/papers/CLM5EU3_trends/out/trend_data/eCLM_trends/upd_1/
+outfile=ESACCI_SM_upd_1_3km.nc
 variables=(
     SM
 )
@@ -19,6 +19,9 @@ variables=(
 slope_units="{'TWS_slope': 'mm month^-1',
               'ET_slope': 'mm day^-1 month^-1',
               'SM_slope': 'm^3 m^-3 month^-1',
+              'TWS_intercept': 'mm month^-1',
+              'ET_intercept': 'mm day^-1 month^-1',
+              'SM_intercept': 'm^3 m^-3 month^-1',
               'TWS_p': 'dimensionless',
               'ET_p': 'dimensionless',
               'SM_p': 'dimensionless'}"

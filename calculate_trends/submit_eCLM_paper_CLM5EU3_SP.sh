@@ -11,7 +11,7 @@ source /p/scratch/cjibg31/jibg3105/projects/venvs/test_crusty/activate.sh
 # Data
 data=CLM5_detect_SP_12
 outdir=/p/scratch/cjibg31/jibg3105/projects/papers/CLM5EU3_trends/out/trend_data/
-outfile=CLM5_detect_SP_upd_0_12km.nc
+outfile=CLM5_detect_SP_upd_1_12km.nc
 variables=(
     TWS
     ET
@@ -21,6 +21,9 @@ variables=(
 units="{'TWS_slope': 'mm month^-1',
         'ET_slope': 'mm day^-1 month^-1',
         'SM_slope': 'm^3 m^-3 month^-1',
+        'TWS_intercept': 'mm month^-1',
+        'ET_intercept': 'mm day^-1 month^-1',
+        'SM_intercept': 'm^3 m^-3 month^-1',
         'TWS_p': 'dimensionless',
         'ET_p': 'dimensionless',
         'SM_p': 'dimensionless'}"

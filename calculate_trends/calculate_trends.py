@@ -81,7 +81,9 @@ if __name__ == '__main__':
     data_dict = getattr(data_config, args.data)
 
     vars_out = [f'{v}_slope' for v in args.variables] + \
-               [f'{v}_p' for v in args.variables]
+               [f'{v}_p' for v in args.variables] + \
+               [f'{v}_intercept' for v in args.variables]
+    
     
     func = getattr(custom_funcs, args.func_name)
 

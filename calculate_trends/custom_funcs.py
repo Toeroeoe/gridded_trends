@@ -82,25 +82,14 @@ def mannkendall(arrays: dict[str, np.ndarray],
 
         for v, array in arrays.items():
         
-            if np.isnan(array).all(): 
+            if (np.isnan(array).all() 
+                or np.all(array == array[0])
+                or (np.count_nonzero(np.isnan(array)) > 0.7 * len(array))): 
             
                 dict_out[f'{v}_slope'] = np.nan
                 dict_out[f'{v}_p'] = np.nan
+                dict_out[f'{v}_intercept'] = np.nan
         
-                continue
-
-            if np.all(array == array[0]):
-                
-                dict_out[f'{v}_slope'] = np.nan
-                dict_out[f'{v}_p'] = np.nan
-                
-                continue
-            
-            if np.count_nonzero(np.isnan(array)) > 0.7 * len(array):
-                
-                dict_out[f'{v}_slope'] = np.nan
-                dict_out[f'{v}_p'] = np.nan
-                
                 continue
 
             if array.ndim == 1:
@@ -115,5 +104,6 @@ def mannkendall(arrays: dict[str, np.ndarray],
     
             dict_out[f'{v}_slope'] = result.slope
             dict_out[f'{v}_p'] = result.p
+            dict_out[f'{v}_intercept'] = result.intercept
     
         return dict_out
