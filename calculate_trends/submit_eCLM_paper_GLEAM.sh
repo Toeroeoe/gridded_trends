@@ -9,9 +9,9 @@
 source /p/scratch/cjibg31/jibg3105/projects/venvs/test_crusty/activate.sh
 
 # Data
-data=GLEAM_ET_12
-outdir=/p/scratch/cjibg31/jibg3105/projects/papers/CLM5EU3_trends/out/trend_data/eCLM_trends/upd_1/
-outfile=GLEAM_ET_upd_1_12km.nc
+data=GLEAM_ET_3
+outdir=/p/scratch/cjibg31/jibg3105/projects/papers/CLM5EU3_trends/out/trend_data/eCLM_trends/upd_2/
+outfile=GLEAM_ET_upd_2_3km.nc
 variables=(
     ET
 )

@@ -63,7 +63,7 @@ GLEAM_ET_3 = {'name': 'GLEAM_ET_3',
               'resolution_time': 'MS',
               'grid': 'EU3',
               'variables': ['ET'],
-              'variable_names': {'ET': 'Et'},
+              'variable_names': {'ET': 'E'},
               'variable_dimensions': {'ET': ['time', 'lat', 'lon']}, 
               'variable_units': {'ET': r'mm day$^{-1}$'}}
 
@@ -79,7 +79,7 @@ GLEAM_ET_12 = {'name': 'GLEAM_ET_12',
               'resolution_time': 'MS',
               'grid': 'EU12',
               'variables': ['ET'],
-              'variable_names': {'ET': 'Et'},
+              'variable_names': {'ET': 'E'},
               'variable_dimensions': {'ET': ['time', 'lat', 'lon']}, 
               'variable_units': {'ET': r'mm day$^{-1}$'}}
 
